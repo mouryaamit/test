@@ -14,7 +14,7 @@ import {ApiService} from './api.service';
 })
 export class AppComponent implements OnInit {
   displayedColumns: string[] = ['name', 'address', 'reviewBy', 'review'];
-  dataSource: any;
+  dataSource: any = [];
   isLoadingResults = true;
   location: any;
   limit: any;

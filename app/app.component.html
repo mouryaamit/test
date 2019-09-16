@@ -24,13 +24,15 @@
         <button (click)="search()" color="primary" mat-raised-button>Search</button>
       </div>
     </div>
+    <br/>
     <div class="row">
       <div class="example-container mat-elevation-z8 col">
         <div *ngIf="isLoadingResults"
              class="example-loading-shade">
           <mat-progress-bar *ngIf="isLoadingResults" mode="indeterminate"></mat-progress-bar>
         </div>
-        <mat-table #table *ngIf="!isLoadingResults" [dataSource]="dataSource">
+        <div *ngIf="!isLoadingResults && dataSource.length === 0" class="text-center text-danger">No records found</div>
+        <mat-table #table *ngIf="!isLoadingResults && dataSource.length > 0" [dataSource]="dataSource">
 
           <!-- Name Column -->
           <ng-container matColumnDef="name">
