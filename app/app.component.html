@@ -4,12 +4,13 @@
       <div class="col text-center">
         <mat-form-field>
           <input [(ngModel)]="location" matInput placeholder="Location" required>
+          <mat-icon (click)="getLocation()" matSuffix>my_location</mat-icon>
         </mat-form-field>
       </div>
       <div class="col text-center">
         <mat-form-field>
           <mat-label>Limit</mat-label>
-          <mat-select [(ngModel)]="limit" [(value)]="limit">
+          <mat-select [(ngModel)]="limit" [(value)]="limit" required>
             <mat-option value="1">1</mat-option>
             <mat-option value="2">2</mat-option>
             <mat-option value="5">5</mat-option>

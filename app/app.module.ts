@@ -10,6 +10,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 import {FormsModule} from '@angular/forms';
 import {MatTableModule} from '@angular/material/table';
 import {MatProgressBarModule} from '@angular/material/progress-bar';
+import {MatIconModule} from '@angular/material/icon';
 import {HttpClientModule} from '@angular/common/http';
 import {ApiService} from './api.service';
 
@@ -32,7 +33,8 @@ import {AppComponent} from './app.component';
     MatButtonModule,
     NgbModule,
     MatTableModule,
-    MatProgressBarModule
+    MatProgressBarModule,
+    MatIconModule
   ],
   providers: [ApiService],
   bootstrap: [AppComponent]

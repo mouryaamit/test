@@ -11,4 +11,8 @@ export class ApiService {
     return this.http.get("/api/businesses?location=" + location + "&limit=" + limit)
   }
 
+  getLocation(lat, lng) {
+    return this.http.get("https://maps.googleapis.com/maps/api/geocode/json?latlng=" + lat + "," + lng + "&key=AIzaSyDrNJzu3wIqBtryCwDJxCsbebT1wLeLZpA")
+  }
+
 }
