@@ -8,7 +8,7 @@ export class ApiService {
   }
 
   searchBusiness(location, limit) {
-    return this.http.get("https://alpharetta-top-ice-cream-shops-simple-api.amitmourya.me/api/businesses?location=" + location + "&limit=" + limit)
+    return this.http.get("/api/businesses?location=" + location + "&limit=" + limit)
   }
 
 }
